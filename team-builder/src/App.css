@@ -42,6 +42,11 @@ input {
   border-radius: 3px;
 }
 
+input:focus {
+  outline: 1px solid #499269;
+  outline-offset: 1px;
+}
+
 label {
   margin: 6px 0;
   text-align: left;
@@ -91,7 +96,7 @@ button:hover {
 }
 
 .member-card {
-  width: 300px;
+  min-width: 300px;
   min-height: 100px;
   padding: 10px;
   margin: 20px 30px;
@@ -103,6 +108,10 @@ button:hover {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+h2, h3, .email {
+  padding: 0 50px;
 }
 
 h2 {
@@ -133,3 +142,22 @@ h3 {
   right: 5px;
 }
 
+.delete-btn {
+  width: 20px;
+  padding: 2px;
+  margin: 0;
+  border-radius: 2px;
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  background-color: transparent;
+  border: 1px solid #865803;
+}
+
+.delete-btn:hover {
+  border-color: #f3d574;
+}
+
+.delete-btn:active {
+  border: unset;
+}

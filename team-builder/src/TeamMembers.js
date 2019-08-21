@@ -12,7 +12,7 @@ function TeamMembers(props) {
                   <h3>{member.role}</h3>
                   <p className="email">{member.email}</p>
                   <button className="edit-btn" onClick={() => props.changeMemberToEdit(member)}>Edit</button>
-                  <button onClick={() => props.deleteMember(member)}>X</button>
+                  <button className="delete-btn" onClick={() => props.deleteMember(member)}>x</button>
                </div>
             )
          })}
