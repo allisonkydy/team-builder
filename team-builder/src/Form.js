@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Form(props) {
    const [member, setMember] = useState({name: "", role: "", email: ""});
@@ -16,6 +16,10 @@ function Form(props) {
       props.addTeamMember(newMember);
       setMember({name: "", role: "", email: ""});
    }
+
+   useEffect(() => {
+      setMember(props.memberToEdit)
+   }, [props.memberToEdit])
 
    return(
       <form onSubmit={submitForm}>
