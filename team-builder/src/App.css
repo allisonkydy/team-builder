@@ -32,6 +32,7 @@ form {
 
 input, label {
   width: 40%;
+  min-width: 190px;
 }
 
 input {
@@ -56,10 +57,18 @@ button {
   background-color: #e2a93f;
   color: #4b4b4b;
   font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 3px #865803;
+  outline: none;
 }
 
 button:active {
-  outline: none;
+  transform: translateY(3px);
+  box-shadow: unset;
+}
+
+button:hover {
+  background-color: #f3d574;
 }
 
 .placeholder {
@@ -93,6 +102,7 @@ button:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 h2 {
@@ -110,5 +120,16 @@ h3 {
 .email {
   font-size: 1.3rem;
   color: #7a6d65;
+}
+
+.edit-btn {
+  width: 40px;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: 6px;
+  right: 5px;
 }
 
