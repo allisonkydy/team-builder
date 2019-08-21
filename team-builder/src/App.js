@@ -26,6 +26,11 @@ function App() {
     setMemberToEdit(null);
   }
 
+  const deleteMember = memberToDelete => {
+    const editedList = teamList.filter(member => member !== memberToDelete)
+    setTeamList(editedList);
+  }
+
   console.log("Team List: ", teamList);
   console.log("memberToEdit: ", memberToEdit);
 
@@ -33,7 +38,7 @@ function App() {
     <div className="App">
       <h1>Team Builder</h1>
       <Form addTeamMember={addTeamMember} memberToEdit={memberToEdit} editTeamMember={editTeamMember}/>
-      <TeamMembers teamList={teamList} changeMemberToEdit={changeMemberToEdit} />
+      <TeamMembers teamList={teamList} changeMemberToEdit={changeMemberToEdit} deleteMember={deleteMember} />
     </div>
   );
 }
