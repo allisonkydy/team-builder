@@ -8,10 +8,14 @@ import './App.css';
 function App() {
   const [teamList, setTeamList] = useState([]);
 
+  const addTeamMember = member => {
+    setTeamList([...teamList, member]);
+  }
+
   return (
     <div className="App">
+      <Form addTeamMember={addTeamMember}/>
       <TeamMembers teamList={teamList}/>
-      <Form />
     </div>
   );
 }
