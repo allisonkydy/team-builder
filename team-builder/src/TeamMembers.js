@@ -11,7 +11,7 @@ function TeamMembers(props) {
                   <h2>{member.name}</h2>
                   <h3>{member.role}</h3>
                   <p className="email">{member.email}</p>
-                  <button onChange={props.editTeamMember(member)}>Edit</button>
+                  <button onClick={() => props.changeMemberToEdit(member)}>Edit</button>
                </div>
             )
          })}

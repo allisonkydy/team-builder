@@ -9,17 +9,25 @@ function Form(props) {
 
    const submitForm = event => {
       event.preventDefault();
-      const newMember = {
-         ...member,
-         key: Date.now()
-      };
-      props.addTeamMember(newMember);
+      
+      if (!props.memberToEdit) {
+         const newMember = {
+            ...member,
+            key: Date.now()
+         };
+         props.addTeamMember(newMember);
+      } else {
+         props.editTeamMember(member);
+      }
+      
       setMember({name: "", role: "", email: ""});
    }
 
    useEffect(() => {
-      setMember(props.memberToEdit)
+      if (props.memberToEdit !== null) setMember(props.memberToEdit)
    }, [props.memberToEdit])
+
+   console.log("Member: ", member);
 
    return(
       <form onSubmit={submitForm}>
@@ -29,7 +37,7 @@ function Form(props) {
          <input name="role" type="text" placeholder="role..." value={member.role} onChange={handleChange} />
          <label htmlFor="email">Email</label>
          <input name="email" type="email" placeholder="someone@example.com" value={member.email} onChange={handleChange} />
-         <button type="submit">Add Team Member</button>
+         <button type="submit">Submit</button>
       </form>
    )
 }
