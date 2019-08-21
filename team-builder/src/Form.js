@@ -19,15 +19,13 @@ function Form(props) {
       } else {
          props.editTeamMember(member);
       }
-      
+
       setMember({name: "", role: "", email: ""});
    }
 
    useEffect(() => {
-      if (props.memberToEdit !== null) setMember(props.memberToEdit)
+      if (props.memberToEdit !== null) setMember(props.memberToEdit);
    }, [props.memberToEdit])
-
-   console.log("Member: ", member);
 
    return(
       <form onSubmit={submitForm}>

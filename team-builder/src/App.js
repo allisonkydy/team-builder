@@ -27,12 +27,9 @@ function App() {
   }
 
   const deleteMember = memberToDelete => {
-    const editedList = teamList.filter(member => member !== memberToDelete)
+    const editedList = teamList.filter(member => member !== memberToDelete);
     setTeamList(editedList);
   }
-
-  console.log("Team List: ", teamList);
-  console.log("memberToEdit: ", memberToEdit);
 
   return (
     <div className="App">
