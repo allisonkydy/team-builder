@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  background-color: #94d1ae;
+}
+
+h1 {
+  text-align: center;
+  padding: 30px 0;
+  color: #202020;
+  font-size: 2.6rem;
+}
+
+form {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input, label {
+  width: 40%;
+}
+
+input {
+  font-size: 1.6rem;
+  height: 32px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+label {
+  margin: 6px 0;
+  text-align: left;
+  font-size: 1.8rem;
+  color: #505050;
+}
+
+button {
+  width: 160px;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 10px;
+  background-color: #e2a93f;
+  color: #4b4b4b;
+  font-size: 1.5rem;
+}
+
+button:active {
+  outline: none;
+}
+
+.placeholder {
+  text-align: center;
+  width: 300px;
+  margin: 20px auto 0;
+  padding: 80px 0;
+  border: 2px dashed #555555;
+  font-size: 1.8rem;
+  color: #555555;
+}
+
+.team-list {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.member-card {
+  width: 300px;
+  min-height: 100px;
+  padding: 10px;
+  margin: 20px 30px;
+  border: 2px solid #e2a93f;
+  border-radius: 3px;
+  background-color: #eeebe1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #472510;
+}
+
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+  color: #725a4c;
+}
+
+.email {
+  font-size: 1.3rem;
+  color: #7a6d65;
+}
+

@@ -1,16 +1,16 @@
 import React from 'react';
 
 function TeamMembers(props) {
-   if(props.teamList.length === 0) return <div>No members yet!</div>
+   if(props.teamList.length === 0) return <p className="placeholder">No members yet!</p>
 
    return (
-      <div>
+      <div className="team-list">
          {props.teamList.map(member => {
             return (
-               <div key={member.key}>
-                  <h1>{member.name}</h1>
-                  <h2>{member.role}</h2>
-                  <p>{member.email}</p>
+               <div className="member-card" key={member.key}>
+                  <h2>{member.name}</h2>
+                  <h3>{member.role}</h3>
+                  <p className="email">{member.email}</p>
                </div>
             )
          })}
